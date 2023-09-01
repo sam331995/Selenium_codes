@@ -11,9 +11,10 @@ public class Alert_confirmation_popup {
 		System.setProperty("webdriver.gecko.driver","./softwares/geckodriver.exe");
 		WebDriver driver=new FirefoxDriver();
          driver.get("https://demo.guru99.com/test/delete_customer.php");
+         
          driver.findElement(By.name("cusid")).sendKeys("admin");
          driver.findElement(By.name("submit")).click();
-         Alert a = driver.switchTo().alert();
+         Alert a = driver.switchTo().alert(); // to switch control to popup
          Thread.sleep(2000);
          a.accept();
          Thread.sleep(2000);
